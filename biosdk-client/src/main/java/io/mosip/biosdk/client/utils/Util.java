@@ -46,7 +46,6 @@ import static io.mosip.biosdk.client.constant.AppConstants.LOGGER_SESSIONID;
  * @since 1.0
  */
 public class Util {
-
     private static Logger utilLogger = LoggerConfig.logConfig(Util.class);
     private static RestTemplate REST_TEMPLATE = null;
 
@@ -226,4 +225,15 @@ public class Util {
     public static String base64Encode(String data) {
         return Base64.getEncoder().encodeToString(data.getBytes());
     }
+
+	/**
+	 * Flag indicating whether to log request and response details for debugging
+	 * purposes. Set as environment variable 'mosip_biosdk_request_response_debug'.
+	 */
+	public static String getDebugRequestResponse() {
+		if (System.getProperty("mosip_biosdk_request_response_debug") != null)
+			return System.getProperty("mosip_biosdk_request_response_debug");
+
+		return System.getenv("mosip_biosdk_request_response_debug");
+	}
 }

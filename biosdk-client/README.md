@@ -12,7 +12,7 @@ It is used by:
 
 ---
 
-## Table of Contents
+### Table of Contents
 
 	* [Overview](#overview)
 	* [Prerequisites](#prerequisites)
@@ -23,7 +23,7 @@ It is used by:
 
 ---
 
-## Prerequisites
+### Prerequisites
 
 Ensure you have the following dependencies installed before proceeding:
 
@@ -34,9 +34,9 @@ Ensure you have the following dependencies installed before proceeding:
 
 ---
 
-## Setting Up Locally
+### Setting Up Locally
 
-### Follow these steps to set up the BioSDK-Client locally:
+#### Follow these steps to set up the BioSDK-Client locally:
 
 1. **Clone the repository**
 
@@ -52,9 +52,9 @@ Ensure you have the following dependencies installed before proceeding:
 ```
 ---
 
-## Configurations
+### Configurations
 
-## Bio-SDK Service URLs
+#### Bio-SDK Service URLs
 
 Bio-SDK service URLs can vary based on the modality and format. Specify these in the `initParams` of the `init` method as key-value pairs.
 
@@ -64,7 +64,7 @@ For example, to configure the URL for the minutiae format of fingerprints:
 	finger.format.url.minutiea -> "<Bio-SDK Service URL for minutiea format>"
 ```
 
-## Default Format Configuration
+#### Default Format Configuration
 
 For a generic format configuration, use the `.default` suffix:
 
@@ -77,7 +77,7 @@ For a generic format configuration, use the `.default` suffix:
 If the above URLs are not specified in initParams, it will take a default Bio-SDK service URL from below property.
 
 
-## Default URL
+#### Default URL
 
 
 If the above URLs are not specified in initParams, the system will fallback to a global default URL:
@@ -93,11 +93,11 @@ for example:
 ```
 ---
 
-## Deployment
+### Deployment
 
 There are multiple ways to deploy biosdk-client with mosip-services. According to mosip-infra 1.1.3, it can be deployed using the following steps.
 
-### Create install script
+#### Create install script
 
 1. Create a bash script file named "install.sh", as shown below:
 
@@ -118,7 +118,7 @@ There are multiple ways to deploy biosdk-client with mosip-services. According t
 	echo "Installating Mock Bio-SDK completed."
 ```
 
-### Prepare biosdk.zip
+#### Prepare biosdk.zip
 
 1. Place the following files in the same folder:
 
@@ -140,7 +140,7 @@ For more information on deployment, please refer to [mosip-infra](https://github
 
 ---
 
-## License
+### License
 
 This project is licensed under the [MOSIP License](LICENSE).  
 
